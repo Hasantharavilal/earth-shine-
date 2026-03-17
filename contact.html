@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Shine | Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#010f05',
+                            green: '#00e676',
+                            blue: '#00b0ff',
+                            light: '#e0f2f1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-brand-light bg-brand-dark antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-earth-americas text-brand-green text-3xl group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="font-outfit font-bold text-2xl tracking-wide text-brand-light">EARTH<span class="text-brand-green">SHINE</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Home</a>
+                <a href="about.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">About</a>
+                <a href="services.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Services</a>
+                <a href="contact.html" class="nav-link text-brand-green font-medium transition-colors hover:text-brand-green">Contact</a>
+                <a href="contact.html" class="btn-primary px-6 py-2 rounded-full cursor-pointer">Join Us</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-brand-green text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-green/20 mt-4 absolute w-full">
+            <div class="flex flex-col space-y-4 px-6 py-6 font-medium">
+                <a href="index.html" class="text-gray-300">Home</a>
+                <a href="about.html" class="text-gray-300">About</a>
+                <a href="services.html" class="text-gray-300">Services</a>
+                <a href="contact.html" class="text-brand-green">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-40 pb-16 relative bg-brand-dark">
+        <div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom,rgba(0,230,118,0.5)_0%,rgba(1,15,5,0)_60%)]"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in">
+            <h1 class="font-outfit text-5xl md:text-6xl font-extrabold mb-4">Get In <span class="text-brand-green">Touch</span></h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Have a project in mind or want to join our global conservation initiatives? Reach out today.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-12 pb-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto glass-card rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(0,230,118,0.05)] fade-in">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <!-- Form -->
+                    <div>
+                        <h3 class="font-outfit text-2xl font-bold mb-6 text-brand-light">Send a Message</h3>
+                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                                <input type="text" class="w-full bg-[#010803] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                <input type="email" class="w-full bg-[#010803] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors" placeholder="john@example.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Your Message</label>
+                                <textarea rows="4" class="w-full bg-[#010803] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors" placeholder="How can we help?" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary py-4 rounded-lg text-lg">Send Message <i class="fa-solid fa-paper-plane ml-2"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="flex flex-col justify-center border-t md:border-t-0 md:border-l border-gray-800 pt-8 md:pt-0 md:pl-12">
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green text-xl shrink-0">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Contact Person</h4>
+                                    <p class="text-gray-400">Hasantha ravilal Thilakarathna</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Email Address</h4>
+                                    <p class="text-gray-400"><a href="mailto:hasantharavilal@gmail.com" class="hover:text-brand-green transition-colors">hasantha ravilal@gmail.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green text-xl shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Phone Number</h4>
+                                    <p class="text-gray-400"><a href="tel:+94760777973" class="hover:text-brand-green transition-colors">+94760777973</a></p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue text-xl shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Location</h4>
+                                    <p class="text-gray-400">Monaragala, Sri Lanka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#010803] py-12 border-t border-brand-green/10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm mt-8">&copy; 2026 Earth Shine. A Better Future.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

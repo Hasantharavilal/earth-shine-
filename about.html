@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Shine | About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#010f05',
+                            green: '#00e676',
+                            blue: '#00b0ff',
+                            light: '#e0f2f1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-brand-light bg-brand-dark antialiased">
+
+    <!-- Navigation (Same as index) -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-earth-americas text-brand-green text-3xl group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="font-outfit font-bold text-2xl tracking-wide text-brand-light">EARTH<span class="text-brand-green">SHINE</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Home</a>
+                <a href="about.html" class="nav-link text-brand-green font-medium transition-colors hover:text-brand-green">About</a>
+                <a href="services.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Services</a>
+                <a href="contact.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Contact</a>
+                <a href="contact.html" class="btn-primary px-6 py-2 rounded-full cursor-pointer">Join Us</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-brand-green text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-green/20 mt-4 absolute w-full">
+            <div class="flex flex-col space-y-4 px-6 py-6 font-medium">
+                <a href="index.html" class="text-gray-300">Home</a>
+                <a href="about.html" class="text-brand-green">About</a>
+                <a href="services.html" class="text-gray-300">Services</a>
+                <a href="contact.html" class="text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 relative overflow-hidden bg-brand-dark">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(circle_at_top_right,rgba(0,176,255,0.3)_0%,rgba(1,15,5,0)_70%)]"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in">
+            <h1 class="font-outfit text-5xl md:text-6xl font-extrabold mb-4">About <span class="text-brand-green">Earth Shine</span></h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Discover our origins, our vision for a verdant Earth, and why we dedicate ourselves to the ultimate cause of environmental preservation.</p>
+        </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="relative rounded-3xl overflow-hidden glass-card p-2">
+                        <img src="assets/nature.png" alt="Nature Sustainability" class="w-full h-auto rounded-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-6 left-6 text-2xl font-outfit font-bold"><i class="fa-solid fa-leaf text-brand-green mr-2"></i> Our Roots</div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 fade-in delay-100">
+                    <h2 class="font-outfit text-3xl md:text-4xl font-bold mb-6">Restoring Balance to <span class="text-brand-blue">Nature</span></h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Founded on the principle that modern human progress shouldn't be the detriment of natural ecosystems, Earth Shine stands at the forefront of green technology and aggressive conservation efforts. We are an international collective of scientists, engineers, and visionaries.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-8">
+                        Our journey started recognizing the urgent call of our planet. By bringing actionable, high-tech clean solutions to global markets, we aim to reverse climate trends.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block">Tech-First Conservation</strong>
+                                <span class="text-sm text-gray-400">Implementing AI and big data monitoring for deforestation.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-blue/20 flex items-center justify-center text-brand-blue mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block">Global Policies Policy</strong>
+                                <span class="text-sm text-gray-400">Working with governments to rewrite environmental guidelines globally.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#010803] py-12 border-t border-brand-green/10 mt-20">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-gray-800 pb-8">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-earth-americas text-brand-green text-2xl"></i>
+                    <span class="font-outfit font-bold text-xl tracking-wide">EARTH<span class="text-brand-green">SHINE</span></span>
+                </div>
+                <!-- ... Socials ... -->
+            </div>
+            <p class="text-gray-500 text-sm mt-8">&copy; 2026 Earth Shine.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

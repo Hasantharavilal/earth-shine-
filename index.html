@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Shine | Home</title>
+    <meta name="description" content="Earth Shine protects nature and builds a sustainable future.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#010f05',
+                            green: '#00e676',
+                            blue: '#00b0ff',
+                            light: '#e0f2f1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-brand-light bg-brand-dark antialiased selection:bg-brand-green selection:text-brand-dark">
+
+    <div class="hero-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-earth-americas text-brand-green text-3xl group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="font-outfit font-bold text-2xl tracking-wide text-brand-light">EARTH<span class="text-brand-green">SHINE</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-brand-green font-medium transition-colors hover:text-brand-green">Home</a>
+                <a href="about.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">About</a>
+                <a href="services.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Services</a>
+                <a href="contact.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Contact</a>
+                <a href="contact.html" class="btn-primary px-6 py-2 rounded-full cursor-pointer">Join Us</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-brand-green text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-green/20 mt-4 absolute w-full">
+            <div class="flex flex-col space-y-4 px-6 py-6 font-medium">
+                <a href="index.html" class="text-brand-green">Home</a>
+                <a href="about.html" class="text-gray-300">About</a>
+                <a href="services.html" class="text-gray-300">Services</a>
+                <a href="contact.html" class="text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero_bg.png" alt="Earth from space" class="w-full h-full object-cover opacity-40 parallax-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 text-center md:text-left fade-in">
+                <h1 class="font-outfit text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    A Brighter Future for Our <br> <span class="text-gradient">Planet</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-lg mx-auto md:mx-0 font-light">
+                    Earth Shine is dedicated to promoting a sustainable world through innovative green solutions and global conservation efforts.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="services.html" class="btn-primary px-8 py-4 rounded-full text-lg cursor-pointer">Explore Solutions</a>
+                    <a href="about.html" class="btn-outline px-8 py-4 rounded-full text-lg border-2 border-brand-green text-brand-green cursor-pointer">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Overview -->
+    <section class="py-24 bg-brand-dark relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                <span class="text-brand-green uppercase tracking-widest font-semibold text-sm mb-3 block">Our Mission</span>
+                <h2 class="font-outfit text-4xl md:text-5xl font-bold mb-6">We Innovate for <span class="text-brand-green">Sustainability</span></h2>
+                <p class="text-gray-400 text-lg">We bring together cutting-edge technology and deep environmental respect to pioneer solutions that keep Earth shining bright.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-10 rounded-3xl text-center fade-in delay-100">
+                    <div class="w-16 h-16 bg-brand-green/10 flex items-center justify-center rounded-full mx-auto mb-6 text-brand-green text-2xl shadow-[0_0_20px_rgba(0,230,118,0.2)]">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-outfit text-2xl font-bold mb-4">Green Energy</h3>
+                    <p class="text-gray-400">Transitioning to 100% renewable power sources to reduce carbon footprints globally.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="glass-card p-10 rounded-3xl text-center fade-in delay-200">
+                    <div class="w-16 h-16 bg-brand-green/10 flex items-center justify-center rounded-full mx-auto mb-6 text-brand-blue text-2xl shadow-[0_0_20px_rgba(0,176,255,0.2)]">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="font-outfit text-2xl font-bold mb-4">Clean Water</h3>
+                    <p class="text-gray-400">Advanced filtration and conservation technologies preserving the essence of life.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-10 rounded-3xl text-center fade-in delay-300">
+                    <div class="w-16 h-16 bg-brand-green/10 flex items-center justify-center rounded-full mx-auto mb-6 text-yellow-400 text-2xl shadow-[0_0_20px_rgba(250,204,21,0.2)]">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="font-outfit text-2xl font-bold mb-4">Smart Cities</h3>
+                    <p class="text-gray-400">Building urban environments that work strictly in harmony with natural ecosystems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#010803] py-12 border-t border-brand-green/10 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center gap-2 mb-6 md:mb-0">
+                    <i class="fa-solid fa-earth-americas text-brand-green text-2xl"></i>
+                    <span class="font-outfit font-bold text-xl tracking-wide">EARTH<span class="text-brand-green">SHINE</span></span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-brand-green transition-colors text-xl"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-brand-green transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-brand-green transition-colors text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:text-left text-gray-500 text-sm border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <p>&copy; 2026 Earth Shine. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0 justify-center">
+                    <a href="#" class="hover:text-brand-light transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-light transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

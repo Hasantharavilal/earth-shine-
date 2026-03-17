@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Shine | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#010f05',
+                            green: '#00e676',
+                            blue: '#00b0ff',
+                            light: '#e0f2f1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-brand-light bg-brand-dark antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-earth-americas text-brand-green text-3xl group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="font-outfit font-bold text-2xl tracking-wide text-brand-light">EARTH<span class="text-brand-green">SHINE</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Home</a>
+                <a href="about.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">About</a>
+                <a href="services.html" class="nav-link text-brand-green font-medium transition-colors hover:text-brand-green">Services</a>
+                <a href="contact.html" class="nav-link text-gray-300 font-medium transition-colors hover:text-brand-green">Contact</a>
+                <a href="contact.html" class="btn-primary px-6 py-2 rounded-full cursor-pointer">Join Us</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-brand-green text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-green/20 mt-4 absolute w-full">
+            <div class="flex flex-col space-y-4 px-6 py-6 font-medium">
+                <a href="index.html" class="text-gray-300">Home</a>
+                <a href="about.html" class="text-gray-300">About</a>
+                <a href="services.html" class="text-brand-green">Services</a>
+                <a href="contact.html" class="text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-40 pb-16 relative bg-brand-dark border-b border-brand-green/10">
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in">
+            <h1 class="font-outfit text-5xl md:text-6xl font-extrabold mb-4">Our <span class="text-brand-green">Services</span></h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">We provide a holistic approach to sustainable technologies that benefit both industry and our planet.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            
+            <!-- Service 1 -->
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-24 fade-in">
+                <div class="w-full lg:w-1/2">
+                    <h3 class="font-outfit text-3xl font-bold mb-4 text-brand-light">Smart Urban Planning</h3>
+                    <p class="text-gray-400 text-lg mb-6">
+                        We design infrastructure blueprints for future eco-cities. Leveraging generative design, we optimize paths for minimal carbon emissions, seamless integrations of public transportation, and expansive green living spaces in dense urban cores.
+                    </p>
+                    <a href="#" class="text-brand-green font-medium hover:text-brand-light transition underline-offset-4 underline">See case studies</a>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="relative rounded-3xl overflow-hidden glass-card p-2 border-brand-green/30 shadow-[0_0_30px_rgba(0,176,255,0.1)]">
+                        <img src="assets/city.png" alt="Eco City" class="w-full h-auto rounded-2xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 fade-in">
+                <div class="w-full lg:w-1/2">
+                    <h3 class="font-outfit text-3xl font-bold mb-4 text-brand-light">Renewable Grid Installation</h3>
+                    <p class="text-gray-400 text-lg mb-6">
+                        Earth Shine empowers corporations and municipalities to transition entirely effectively to renewable grids. Our custom micro-grid models use advanced solar, wind, and ambient energy-harvesting technologies tailored specifically for high-efficiency output in varying geographical conditions.
+                    </p>
+                    <a href="#" class="text-brand-green font-medium hover:text-brand-light transition underline-offset-4 underline">Request an audit</a>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="glass-card p-10 rounded-3xl h-full flex flex-col justify-center border-brand-blue/20">
+                        <div class="flex gap-4 items-center mb-8">
+                            <i class="fa-solid fa-solar-panel text-5xl text-brand-blue"></i>
+                            <i class="fa-solid fa-wind text-4xl text-brand-green"></i>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between border-b border-gray-800 pb-2"><span class="text-gray-300">Efficiency</span> <span class="text-brand-green font-bold">98%</span></li>
+                            <li class="flex justify-between border-b border-gray-800 pb-2"><span class="text-gray-300">Emissions</span> <span class="text-brand-green font-bold">Zero</span></li>
+                            <li class="flex justify-between"><span class="text-gray-300">Scalability</span> <span class="text-brand-green font-bold">Global</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#010803] py-12 border-t border-brand-green/10 mt-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm mt-8">&copy; 2026 Earth Shine. Making Earth Glow.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
